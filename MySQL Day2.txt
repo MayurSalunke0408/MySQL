@@ -1,0 +1,81 @@
+1) Select
+2) Select Distinct
+3) Where clause
+4) Operators: 
+=            Equal
+>            Greater than
+<            Less than
+>=           Greater than equal
+<=           Less than equal
+<>           Not equal (also written as !=)
+BETWEEN      Between a range(BETWEEN operator is inclusive: begin and end values are included)
+LIKE         Search for pattern
+IN           Specify multiple possible values for a column
+
+show databases;
+use moviesdb;
+show tables;
+
+-- select statement : SELECT statement permits you to read data from one or more tables.
+/* syntax: 
+select column name(s) from table_name;
+*/
+select * from movies;
+select title,release_year from movies;
+
+-- Select Distinct: SELECT DISTINCT statement is to return the different values
+/* sytax:
+select distinct column_name from table_name;
+*/
+select distinct studio from movies;
+
+/*
+where clause: WHERE clause allows the user to filter the data from the table. The WHERE clause allows the
+user to extract only those records that satisfy a specified condition.
+syntax: select * from table_name where condition;
+*/
+select * from movies where release_year = 2022;
+
+-- OPERATORS:
+/*
+=            Equal
+>            Greater than
+<            Less than
+>=           Greater than equal
+<=           Less than equal
+<>           Not equal (also written as !=)
+BETWEEN      Between a range(BETWEEN operator is inclusive: begin and end values are included)
+LIKE         Search for pattern
+IN           Specify multiple possible values for a column
+*/
+
+select * from movies where imdb_rating = 8.4;
+select * from movies where imdb_rating > 9;
+select * from movies where imdb_rating < 9;
+select * from movies where imdb_rating >= 9;
+select * from movies where imdb_rating <= 9;
+select * from movies where imdb_rating <> 9;
+select * from movies where imdb_rating between 5 and 7;
+/*
+-- Like Operator: LIKE operator is used with the WHERE clause to find for a specified pattern in an attribute.
+two wildcards: % - it represents zero, one, or multiple characters
+			   _ - it represents a single character
+               
+syntax: SELECT column1, column2, ...
+        FROM table_name
+        WHERE column_name LIKE pattern;
+        
+*/
+select * from movies where title like '%or';
+select * from movies where title like 'A%';
+select * from movies where title like '%or%';
+SELECT * FROM movies WHERE title LIKE 'a%r';
+select * from movies where title like 'A_a%';
+
+/* In operator:IN operator allows users to specify multiple values in a WHERE clause
+syntax: SELECT column_name(s) FROM table_name WHERE column_name IN (value1, value2, ...);
+*/
+select * from movies;
+select * from movies where release_year in (2011,2017,2022);
+
+
