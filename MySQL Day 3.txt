@@ -1,0 +1,35 @@
+show databases;
+use moviesdb;
+select * from movies;
+
+/*SQL ORDER BY: in order to print values in ascending/descending order
+syntax: select * from table_name order by column_name; */
+select * from movies order by title desc;
+
+/* SELECT TOP CLAUSE: SELECT TOP is used to specify the number of records from the to return.
+syntax: select * from table_name where condition limit 3; */
+select * from movies order by imdb_rating desc limit 3;
+
+/* aggregate functions: min, max, sum, count, avg */
+select min(imdb_rating) from movies;
+select max(imdb_rating) from movies;
+select sum(imdb_rating) from movies;
+select count(imdb_rating) from movies;
+select avg(imdb_rating) from movies;
+
+/* SQL ALIAS: Aliases are used to give a nickname to a column in a table, a temporary name.
+Aliases are used to make column names more readable to the user.
+syntax: select column_name as new_column_name from tablename;
+*/
+select * from movies;
+select title, release_year as year from movies;
+
+/* GROUP BY: It is used to group rows from the table. And it has the same values as summary rows.
+syntax: SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+ORDER BY column_name(s);
+*/
+select * from movies;
+select industry, count(industry) from movies group by industry;
