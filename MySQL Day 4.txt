@@ -1,0 +1,56 @@
+             SQL Joins
+
+Inner Join 			Outer join
+inner join			left
+                                right
+                                full outer join
+
+/* Joins
+Inner join : Inner
+Outer join: 1) left 2) right 3) full outer join
+*/
+
+-- Inner join: used to print rows from both tables that satisfy the given condition
+-- syntax: select * from table1 inner join table2 on table1.common_c_name = table2.common_c_name
+
+show databases;
+use moviesdb;
+show tables;
+select * from movies;
+select * from financials;
+
+-- inner join
+select * from movies inner join financials on movies.movie_id = financials.movie_id;
+
+/* left join: LEFT JOIN returns all the records from the table1 (left table) and the matched records from the table2 (right table). 
+The output is NULL from the right side if there is no match.
+
+syntax: select * from table1 left join table2 on table1.common_c_name = table2.common_c_name;
+*/
+select * from movies;
+select * from financials;
+
+select * from movies left join financials on movies.movie_id = financials.movie_id;
+
+/* right join: RIGHT JOIN is the opposite of LEFT JOIN. The RIGHT JOIN prints all the columns from the
+table2(right table) even if there no matching rows have been found in the table1 (left table). If there no
+matches have been found in the table (left table), NULL is returned. 
+syntax: select * from table1 right join table2 on table1.common_c_name = table2.common_c_name;
+*/
+
+select * from movies right join financials on movies.movie_id = financials.movie_id;
+
+/* Full outer join: both table will be combined
+left join union right join
+*/
+select * from movies left join financials on movies.movie_id = financials.movie_id
+union
+select * from movies right join financials on movies.movie_id = financials.movie_id;
+
+
+
+
+
+
+
+
