@@ -33,7 +33,7 @@ This repository contains a collection of structured SQL queries, scripts, and mi
 
 ## Day 4] MySQL
 - Joins:
-- 1) Inner join
+  1) Inner join
   2) left join
   3) right join
   4) full outer join
