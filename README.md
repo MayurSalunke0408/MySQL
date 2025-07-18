@@ -13,15 +13,15 @@ This repository contains a collection of structured SQL queries, scripts, and mi
 2) Select Distinct
 3) Where clause
 4) Operators: 
-          =            Equal
-          >            Greater than
-          <            Less than
-          >=           Greater than equal
-          <=           Less than equal
-          <>           Not equal (also written as !=)
-          BETWEEN      Between a range(BETWEEN operator is inclusive: begin and end values are included)
-          LIKE         Search for pattern
-          IN           Specify multiple possible values for a column
+         1)  =            Equal
+         2)  >            Greater than
+         3)  <            Less than
+         4)  >=           Greater than equal
+         5) <=           Less than equal
+         6)  <>           Not equal (also written as !=)
+         7)  BETWEEN      Between a range(BETWEEN operator is inclusive: begin and end values are included)
+         8) LIKE         Search for pattern
+         9) IN           Specify multiple possible values for a column
 
 ## Day 3] MySQL
 1) Order by
