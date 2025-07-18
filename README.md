@@ -22,3 +22,11 @@ This repository contains a collection of structured SQL queries, scripts, and mi
           BETWEEN      Between a range(BETWEEN operator is inclusive: begin and end values are included)
           LIKE         Search for pattern
           IN           Specify multiple possible values for a column
+
+## Day 3] MySQL
+- 1) Order by
+- 2) select top clause
+  3) aggregate functions: count, sum, min, max, avg
+  4) sql alias
+  5) group by
+  6) having
