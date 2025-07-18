@@ -6,11 +6,5 @@ This repository contains a collection of structured SQL queries, scripts, and mi
 🗄️ 2. What is a Database?
 🧠 3. What is a DBMS?
 💾 4. Downloading and Installation
-🧾 5. SQL Queries
-- SQL (Structured Query Language) is used to manage data in relational databases.
-- DDL
-- DQL
-- DML
-- DCL
-- TCL
+🧾 5. SQL Queries - SQL (Structured Query Language) is used to manage data in relational databases. - DDL - DQL - DML - DCL - TCL
   
