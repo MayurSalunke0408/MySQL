@@ -1,0 +1,74 @@
+/* SQL Constraints
+SQL constraints are used to specify any rules for the records in a table. Constraints can be used to limit
+the type of data that can go into a table. It ensures the accuracy and reliability of the records in the
+table, and if there is any violation between the constraint and the record action, the action is aborted.
+*/
+
+
+-- Not Null: It Ensures that a column cannot have a NULL value.
+-- Unique: It Ensures that all the values in a column are unique.
+-- Primary Key: It is a combination of a NOT NULL and UNIQUE. Uniquely identifies each row in a table.
+-- Foreign Key: Uniquely identifies a record /row in another table
+-- Check: It checks that all values in a column satisfy a specific condition
+-- Default: It gives a default value for a column when no value is specified
+-- Index: It is Used to create and retrieve data from the database quickly.
+
+create database records;
+use records;
+show tables;
+-- Not null
+create table table1( id int not null, name varchar(20) not null, age int, salary int not null, city varchar(30) not null); 
+desc table1;
+
+-- unique
+create table table2(id int not null, name varchar(30) not null, age int, salary int not null, unique(id));
+desc table2;
+
+-- Primary key 
+create table table3(id int not null, name varchar(30) not null, age int , salary int not null, primary key(id));
+desc table3;
+
+-- Foreign key
+/* A FOREIGN KEY is used to link two tables together. It is sometimes also called a referencing key.
+Foreign Key is a combination of columns (can be single column) whose value matches a Primary Key
+in the different tables. */
+CREATE TABLE customer(
+Id int NOT NULL,
+Name varchar(20) NOT NULL,
+Age int NOT NULL,
+Address varchar(25) ,
+Salary decimal (18, 2),
+PRIMARY KEY (id)
+);
+desc customer;
+
+create table orders(OrderID int not null, OrderNumber int not null, Id int, primary key(OrderID), constraint FK_customerOrder foreign key(Id) references Customer(Id));
+desc orders;
+
+-- Check
+CREATE TABLE Persons(
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+CHECK (Age>=18)
+);
+desc persons;
+insert into persons values(1,'xyz','abc',19);
+select * from persons;
+
+-- default
+CREATE TABLE Persons2(
+ID int NOT NULL,
+LastName varchar(255) NOT NULL,
+FirstName varchar(255),
+Age int,
+City varchar(255) DEFAULT 'PUNE'
+);
+select * from persons2;
+desc persons2;
+
+-- index
+/* used to create indexes in tables. The indexes are used to retrieve data from the database more quickly than others. */
+CREATE INDEX info on persons2 (ID);
+desc persons2;
