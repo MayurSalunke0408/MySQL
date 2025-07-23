@@ -1,0 +1,67 @@
+show databases;
+use moviesdb;
+show tables;
+select * from movies;
+-- view 
+create view info1 as select * from movies order by imdb_rating desc limit 3;
+select * from info1;
+
+/*What is a SQL Stored Procedure?
+The stored procedure is a prepared SQL query that you can save so that the query can be reused over
+and over again. So, if the user has an SQL query that you write over and over again, keep it as a stored
+procedure and execute it. Users can also pass parameters to a stored procedure so that the stored
+procedure can act based on the parameter value that is given.
+synatx: 
+DELIMITER $$
+CREATE PROCEDURE PROCEDURE_NAME()
+BEGIN
+SELECT Column_name1, Column_name2,...........
+FROM Table_name
+END$$
+DELIMITER */
+
+delimiter $$
+create procedure process15()
+begin	
+	select * from movies order by title;
+    end $$
+delimiter $$
+
+call process15;
+
+call process15;
+
+
+-- triggers:
+/*  Trigger is a stored program that invoked automatically in response to an event such as insert, delete or
+update that occurs in the table. Suppose, you defined a trigger and you insert a row inside the table,
+then it will automatically invoked before or after the insertion of row.
+There are two types of the TRIGGERS:
+1. Row-level-Triggers: it is activated for each row that is inserted, deleted or updated.
+2. Statement-level-Triggers: it is executed for each transaction.
+*/
+create table Employee(id int auto_increment primary key, employee_number int not null, name varchar(30) not null, change_date datetime);
+insert into employee values(1,101,'MR. Patil','2020-09-24');
+select * from employee;
+
+show tables;
+select * from employee;
+insert into employee values(1,101,'Mr. Patil', '2020-09-20');
+
+create trigger before_on_employee_update
+	before update on employee 
+	for each row 
+insert into Employee set action = 'update',
+employee_number = old.employee_number,
+name = old.name,
+change_date = Now();
+
+update employee 
+set name = 'Mr. Shark'
+where employee_number = 102 and id = 2;
+
+select * from employee;
+
+
+
+
