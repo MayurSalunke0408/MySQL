@@ -51,7 +51,7 @@ This repository contains a collection of structured SQL queries, scripts, and mi
   7) Index
  
 ## Day 6] MySQL
--Stored procedures
+- Stored procedures
 - views
 - triggers
 
