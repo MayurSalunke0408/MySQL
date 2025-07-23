@@ -49,3 +49,9 @@ This repository contains a collection of structured SQL queries, scripts, and mi
   5) Check
   6) Default
   7) Index
+ 
+## Day 6] MySQL
+-Stored procedures
+- views
+- triggers
+
