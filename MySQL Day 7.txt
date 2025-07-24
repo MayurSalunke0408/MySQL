@@ -1,0 +1,21 @@
+1) What is diff between sql and MySQL?
+2) What are diff command types in sql
+3) What is diff between having and where clause?
+4) What is the difference between INNER JOIN, LEFT JOIN, RIGHT JOIN, and FULL OUTER JOIN?
+5)How do you find duplicate rows in a table?
+6) How do UNION and UNION ALL differ?
+7) What is order of execution of sql queries?
+8) What is the difference between a function and a stored procedure?
+9) Write a query to fetch the second highest salary from an employees table.
+10) What are triggers?
+11) Explain Common Table Expressions (CTEs) and recursive CTEs with an example.
+12) What is a view? Can we insert data into a view?
+13) What is the difference between DELETE, TRUNCATE, and DROP?
+14) What is normalization? Explain 1NF, 2NF, 3NF.
+15) What are ACID properties?
+16) What is a primary key? Can a table have multiple primary keys?
+17) What is the purpose of GROUP BY?
+18) How do you fetch the last 5 records from a table?
+19) What is a transaction? Explain COMMIT and ROLLBACK.
+20) What are constraints? Explain NOT NULL, UNIQUE, DEFAULT, CHECK.
+
