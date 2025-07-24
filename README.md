@@ -55,3 +55,5 @@ This repository contains a collection of structured SQL queries, scripts, and mi
 - views
 - triggers
 
+## Day 7] MySQL
+- Interview Questions
